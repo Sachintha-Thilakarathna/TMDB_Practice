@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="overflow-x-hidden">
-    <nav class="bg-sky-950 h-16 w-screen flex items-center px-10 justify-between">
+    <nav class="bg-sky-950 h-16 w-screen flex items-center px-10 flex-wrap justify-between">
             <section class="flex">
               <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="" class="h-5 "></img>
               
@@ -50,7 +50,11 @@
   <h1 class="text-2xl absolute text-white font-bold top-30">Millions of movies, TV shows and people to discover. Explore now.</h1>
 </section>    
 
-    </div>
+  <section class="absolute px-10 text-grey-600 flex items-center mt-5 bottom-40 left-120 bg-sky-50 p-2 rounded-lg sm:text-sm">
+      <i class="fa-solid fa-magnifying-glass text-xl pr-10"></i>
+      <h1 class="text-lg opacity-50 italic">Search for a movie,tv show,person</h1>
+    </section>
+  </div>
 
 <div class="flex flex-row gap-8 flex-wrap mt-10 justify-center">    
   <div class="card bg-base-100 w-96 shadow-sm card-border-green-500">
@@ -110,7 +114,12 @@
   </div>
   </div>
 </div>
-    
+
+<div class="flex justify-center mt-4">
+  <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-primary text-white rounded-lg hover:bg-success">See More</button>
+</div>
+
+
   </body>
 </html>
 
