@@ -9,33 +9,53 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="overflow-x-hidden">
-    <nav class="bg-sky-950 h-16 w-screen flex items-center px-10 flex-wrap justify-between">
-            <section class="flex">
-              <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="" class="h-5 "></img>
-              
-              <ul class="text-sky-50 flex ml-4 font-semibold">
-                  <li class="px-5">Movies</li>
-                  <li class="px-5">Tv Shows</li>
-                  <li class="px-5">Pepole</li>
-                  <li class="px-5">More</li>
-              </ul>
-            </section>
+    <nav class="bg-sky-950 flex items-center px-4 md:px-10 flex-wrap justify-between h-16 text-white">
+      <div class="flex items-center w-full md:w-auto justify-between md:justify-start">
+        <div class="flex items-center">
+          <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="" class="h-5"></img>
+          <ul class="text-sky-50 hidden md:flex ml-4 font-semibold">
+            <li class="px-5">Movies</li>
+            <li class="px-5">Tv Shows</li>
+            <li class="px-5">People</li>
+            <li class="px-5">More</li>
+          </ul>
+        </div>
 
-          <section class="text-white flex ">
-            <i class="fa-solid fa-plus text-sky-50 mt-2 mr-5"></i>
-            <span class="border border-sky-50 p-1 text-sm font-semibold rounded-sm hover:bg-sky-50 hover:text-black mb-1">EN</span>
-            <ul class="text-sky-50 flex ml-4 mt-1 font-semibold">
-              <li class="px-5">Login</li>
-              <li class="px-5">Join TMDB</li>
-            </ul>
-            
-            <i class="fa-solid fa-magnifying-glass mt-1 px-2 text-sky-600 text-2xl"></i>
-          </section>    
+        <div class="flex items-center md:hidden">
+          <button id="navToggle" aria-label="Toggle navigation" class="text-sky-50 focus:outline-none">
+            <i class="fa fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-plus text-sky-50 mr-2 hidden md:inline"></i>
+        <span class="border border-sky-50 p-1 text-sm font-semibold rounded-sm hover:bg-sky-50 hover:text-black hidden md:inline">EN</span>
+        <ul class="text-sky-50 hidden md:flex ml-4 mt-1 font-semibold">
+          <li class="px-5">Login</li>
+          <li class="px-5">Join TMDB</li>
+        </ul>
+        <i class="fa-solid fa-magnifying-glass mt-1 px-2 text-sky-600 text-2xl"></i>
+      </div>
+
+      
+      <div id="mobileMenu" class="w-full md:hidden hidden mt-2 px-2">
+        <div class="bg-sky-950 text-sky-50 rounded-md p-3 space-y-2 font-semibold">
+          <a class="block px-2 py-2 hover:bg-sky-800 rounded">Movies</a>
+          <a class="block px-2 py-2 hover:bg-sky-800 rounded">Tv Shows</a>
+          <a class="block px-2 py-2 hover:bg-sky-800 rounded">People</a>
+          <a class="block px-2 py-2 hover:bg-sky-800 rounded">More</a>
+          <hr class="border-sky-700"/>
+          <a class="block px-2 py-2 hover:bg-sky-800 rounded">Login</a>
+          <a class="block px-2 py-2 hover:bg-sky-800 rounded">Join TMDB</a>
+          <div class="pt-1"><span class="inline-block border border-sky-50 p-1 text-sm rounded-sm">EN</span></div>
+        </div>
+      </div>
     </nav>
 
     <div class="h-2 px-10 text-grey-600 flex items-center mt-5">
       <i class="fa-solid fa-magnifying-glass text-xl pr-10"></i>
-      <h1 class="text-lg opacity-50 italic">Search for a movie,tv show,person</h1>
+      <h1 class="sm:text-lg opacity-50 italic text-sm">Search for a movie,tv show,person</h1>
     </div>
 
   <div class="relative h-100 w-screen mt-5">
@@ -46,13 +66,13 @@
   <div class="absolute inset-0 bg-cyan-800 opacity-75"></div>
 
 <section class="flex justify-center content-center">
-  <h1 class="text-5xl absolute text-white font-bold top-20">Welcome.</h1>
-  <h1 class="text-2xl absolute text-white font-bold top-30">Millions of movies, TV shows and people to discover. Explore now.</h1>
+  <h1 class="sm:text-5xl absolute text-white font-bold top-20 text-sm">Welcome.</h1>
+  <h1 class="sm:text-2xl absolute text-white font-bold top-30 text-sm">Millions of movies, TV shows and people to discover. Explore now.</h1>
 </section>    
 
     <section class="flex px-10 justify-center text-white py-40">
-      <i class="fa-solid fa-magnifying-glass text-xl pr-10"></i>
-      <h1 class="text-lg opacity-50 italic">Search for a movie,tv show,person</h1>
+      <i class="fa-solid fa-magnifying-glass text-xl pr-10 sm:text-sm"></i>
+      <h1 class="sm:text-lg opacity-50 italic text-sm">Search for a movie,tv show,person</h1>
     </section>
   </div>
 
@@ -119,6 +139,47 @@
   <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-secondary text-white rounded-lg hover:bg-success">See More</button>
 </div>
 
+    <footer class="bg-sky-950 text-sky-50 mt-12">
+      <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="logo" class="h-5 mb-4" />
+          <p class="text-sm opacity-80">Discover movies, TV shows and people. Built as a practice project.</p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Explore</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Movies</li>
+            <li>TV Shows</li>
+            <li>People</li>
+            <li>More</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Account</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Login</li>
+            <li>Join TMDB</li>
+            <li><span class="border border-sky-50 p-1 text-sm rounded-sm inline-block">EN</span></li>
+          </ul>
+          <div class="mt-4 flex space-x-3">
+            <a class="text-sky-50 hover:opacity-80"><i class="fa-brands fa-twitter"></i></a>
+            <a class="text-sky-50 hover:opacity-80"><i class="fa-brands fa-facebook"></i></a>
+            <a class="text-sky-50 hover:opacity-80"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-sky-800 text-center py-4 text-sm opacity-70">© 2025 TMDB Practice</div>
+    </footer>
+
+    <script>
+      const navToggle = document.getElementById('navToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      navToggle?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
 
   </body>
 </html>

@@ -33,7 +33,7 @@ const card3 = {
   label2: "Action"
 };
 
-// choose which card to show
+
 const {
   img,
   name1,
