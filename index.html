@@ -35,17 +35,17 @@
           <li class="px-5">Login</li>
           <li class="px-5">Join TMDB</li>
         </ul>
-        <i class="fa-solid fa-magnifying-glass mt-1 px-2 text-sky-600 text-2xl"></i>
+        <i class="fa-solid fa-magnifying-glass mt-1 px-2 text-sky-600 text-2xl hover:text-sky-800"></i>
       </div>
 
-      
+
       <div id="mobileMenu" class="w-full md:hidden hidden mt-2 px-2">
         <div class="bg-sky-950 text-sky-50 rounded-md p-3 space-y-2 font-semibold">
           <a class="block px-2 py-2 hover:bg-sky-800 rounded">Movies</a>
           <a class="block px-2 py-2 hover:bg-sky-800 rounded">Tv Shows</a>
           <a class="block px-2 py-2 hover:bg-sky-800 rounded">People</a>
           <a class="block px-2 py-2 hover:bg-sky-800 rounded">More</a>
-          <hr class="border-sky-700"/>
+          <hr class="border-sky-700" />
           <a class="block px-2 py-2 hover:bg-sky-800 rounded">Login</a>
           <a class="block px-2 py-2 hover:bg-sky-800 rounded">Join TMDB</a>
           <div class="pt-1"><span class="inline-block border border-sky-50 p-1 text-sm rounded-sm">EN</span></div>
@@ -161,7 +161,7 @@
           <ul class="space-y-2 text-sm">
             <li>Login</li>
             <li>Join TMDB</li>
-            <li><span class="border border-sky-50 p-1 text-sm rounded-sm inline-block">EN</span></li>
+            <li><span class="border border-sky-50 p-1 text-sm rounded-sm inline-block hover:bg-sky-50 hover:text-black">EN</span></li>
           </ul>
           <div class="mt-4 flex space-x-3">
             <a class="text-sky-50 hover:opacity-80"><i class="fa-brands fa-twitter"></i></a>
@@ -173,14 +173,7 @@
       <div class="border-t border-sky-800 text-center py-4 text-sm opacity-70">© 2025 TMDB Practice</div>
     </footer>
 
-    <script>
-      const navToggle = document.getElementById('navToggle');
-      const mobileMenu = document.getElementById('mobileMenu');
-      navToggle?.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    </script>
-
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
 
